@@ -1,0 +1,16 @@
+{
+  "name": "naihelper.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./js/index.js",
+  "typings": "./js/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build-ts",
+    "build-ts": "npx tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "next"
+  }
+}
