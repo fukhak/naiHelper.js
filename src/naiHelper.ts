@@ -5,7 +5,7 @@ import { Tools } from './tools';
 
 export class NaiHelper {
     static host: string = 'api.novelai.net';
-    static defaultModels: Array<string> = ['nai-diffusion'];
+    static defaultModels: Array<string> = ['nai-diffusion', 'safe-diffusion', 'nai-diffusion-furry'];
     static defailtSamplers: Array<string> = ['k_euler_ancestral', 'k_euler', 'k_lms', 'plms', 'ddim'];
     static defaultQualityTag: string = 'masterpiece, best quality';
     static defaultNegPrompt: string = 'lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry';
