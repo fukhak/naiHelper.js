@@ -208,6 +208,22 @@ export class NaiHelper {
         return response.status === 200;
     }
 
+    static async getSubscription(token: string): Promise<Object> {
+        var response = await fetch('https://' + NaiHelper.host + '/user/subscription', {
+            'headers': {
+                'Authorization': 'Bearer '+token,
+                'Content-Type': 'application/json',
+            },
+            'method': 'GET'
+        })
+
+        if (response.status === 200) {
+            return await response.json();
+        }
+
+        throw new Error('Cannot get data: ' + response.status + ', body: ' + await response.text());
+    }
+
     static checkAllDownloaded(images: Array<NaiImage>): boolean {
         for (const image of images) {
             if (image.imagesBase64 === undefined) {
